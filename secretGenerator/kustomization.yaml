@@ -1,0 +1,9 @@
+secretGenerator:
+- name: example-secret-1
+  literals:
+  - username=admin
+  - password=secret
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+- pod.yaml

@@ -1,0 +1,8 @@
+configMapGenerator:
+- name: example-configmap-1
+  files:
+  - application.properties
+generatorOptions:
+  disableNameSuffixHash: true
+resources:
+- pod.yaml

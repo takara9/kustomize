@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod3
+spec:
+  containers:
+    - name: test-container
+      image: maho/my-ubuntu:0.1
+      command: ["tail",  "-f", "/dev/null"]
+      volumeMounts:
+      - name: config-volume
+        mountPath: /config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: example-configmap-3
